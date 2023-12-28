@@ -1,6 +1,6 @@
 #!bin/bash
 
-touchcmd=(touch $1)
+touchcmd=$(touch $1)
 
 if [ "touchcmd" == $1 ];
 then 

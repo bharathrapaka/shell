@@ -1,5 +1,5 @@
 #!/bin/bash
-version=$(cat /etc/redhat-release)
+version=$1
 
 if [ "$version" == "CentOS Stream release 8" ]; then
     echo "centos machine"

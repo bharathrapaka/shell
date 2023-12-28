@@ -1,8 +1,8 @@
 #!/bin/bash
-version=$1
+serialnumber=$(dmidecode -t 1 | grep Manufacturer)
 
-if [ "$version" == "CentOS Stream release 8" ]; then
-    echo "centos machine"
+if [ "$version" == "DELL" ]; then
+    echo "DELL physical machine"
 else 
-    echo "redhat machine"
+    echo "anything else"
 fi

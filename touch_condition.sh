@@ -4,7 +4,7 @@ touchcmd=$(touch $1)
 
 if [ "touchcmd" == $1 ];
 then 
-echo "create $touchcmd"
+echo "list $1"
 else 
 echo "file already exists"
 fi

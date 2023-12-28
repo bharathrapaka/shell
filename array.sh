@@ -1,4 +1,4 @@
 #!/bin/bash
-fruits=$('apple','orange',grapes)
+fruits=($apple,$orange,$grapes)
 echo "print $fruits"
 

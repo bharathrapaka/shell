@@ -1,4 +1,4 @@
 #!/bin/bash
-fruits=($apple,$orange,$grapes)
-echo "print $fruits"
+fruits=("apple","orange","grapes")
+echo "first value: ${fruits[0]}"
 

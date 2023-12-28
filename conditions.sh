@@ -1,7 +1,9 @@
 #!/bin/bash 
-if(($arch) != "x86_64") {
-    print("incorrect")
+arch=$(uname -m)
+
+if [ "$arch" == "x86_64"] {
+    echo "64-bit"
     else {
-        print("passed")
+    echo "32-bit"
     }
 }

@@ -10,7 +10,8 @@ echo "you are the root user"
 fi 
 yum install mqsql -y
 
-
+RULE=$(echo $?)
+echo "output of $RULE"
 if [ $? -ne 0 ]
 then
 echo "error: installation is failed"

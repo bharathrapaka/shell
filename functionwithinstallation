@@ -1,0 +1,17 @@
+#!/bin/bash
+ID=$(id -u)
+
+if [ $ID -ne 0]
+then
+echo "error: script will run with root previlages"
+exit 1
+else 
+echo "you are the root user"
+fi 
+yum install mysql -y 
+if [ $ID -ne 0]
+then
+echo "error: installation is failed"
+else 
+echo "installation is successful"
+fi

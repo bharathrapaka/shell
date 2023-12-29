@@ -9,7 +9,7 @@ else
 echo "you are the root user"
 fi 
 yum install mysql -y 
-if [ $ID -ne 0]
+if [ $ID -ne 0 ]
 then
 echo "error: installation is failed"
 else 

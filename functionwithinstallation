@@ -8,7 +8,7 @@ exit 1
 else 
 echo "you are the root user"
 fi 
-yum install myqqql -y 
+yum install myqadbdbsqql -y 
 if [ $ID -ne 0 ]
 then
 echo "error: installation is failed"

@@ -10,8 +10,8 @@ echo "you are the root user"
 fi 
 yum install mqsql -y
 
-ID1=$(id -u)
-if [ $ID1 -eq 0 ]
+
+if [ $? -ne 0 ]
 then
 echo "error: installation is failed"
 else 

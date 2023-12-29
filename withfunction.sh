@@ -2,8 +2,6 @@
 ID=$(id -u)
 
 VALIDATE()
-RULE=$(echo $?)
-echo "output is $RULE"
 if [ $1 -ne 0 ]
 then
 echo "error: installation is failed"

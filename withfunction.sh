@@ -1,14 +1,17 @@
 #!/bin/bash
 ID=$(id -u)
 
-VALIDATE()
-if [ $1 -ne 0 ]
+VALIDATE(){
+    if [ $1 -ne 0 ]
 then
 echo "error: installation is failed"
 exit 1
 else 
-echo "installation is successful"
+echo "$2"
 fi
+
+}
+
 
 
 if [ $ID -ne 0 ]
@@ -20,7 +23,7 @@ echo "you are the root user"
 fi   #it exits
 yum install mysql -y
 
-VALIDATE $? " mysql installation successfull"
+VALIDATE $? "mysql installation successfull"
 
 yum install git 
 

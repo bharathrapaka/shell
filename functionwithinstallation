@@ -11,9 +11,9 @@ fi
 yum install mqsql -y
 
 ID1=$(id -u)
-if [ $ID1 -ne 0 ]
+if [ $ID1 -eq 0 ]
 then
-echo "error: installation is failed"
-else 
 echo "installation is successful"
+else 
+echo "error: installation is failed"
 fi

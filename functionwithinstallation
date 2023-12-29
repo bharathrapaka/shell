@@ -8,8 +8,10 @@ exit 1
 else 
 echo "you are the root user"
 fi 
-asdjkdslakds mysql
-if [ $ID -ne 0 ]
+yum install mysql
+
+ID1=$(id -u)
+if [ $ID1 -ne 0 ]
 then
 echo "error: installation is failed"
 else 

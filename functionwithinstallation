@@ -9,7 +9,6 @@ else
 echo "you are the root user"
 fi   #it exits
 yum install mysdasql -y
-
 RULE=$(echo $?)
 echo "output is $RULE"
 if [ $? -ne 0 ]

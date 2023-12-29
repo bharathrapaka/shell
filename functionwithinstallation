@@ -7,7 +7,7 @@ echo "error: script will run with root previlages"
 exit 1
 else 
 echo "you are the root user"
-fi 
+fi   #it exits
 yum install mysdasql -y
 
 RULE=$(echo $?)
@@ -19,3 +19,4 @@ exit 1
 else 
 echo "installation is successful"
 fi
+

@@ -27,11 +27,11 @@ echo "you are the root user"
 fi   #it exits
 yum install mysql -y
 
-VALIDATE $? "mysql installation successfull"
+VALIDATE $? "mysql installation successfull" &>> $LOG_FILE 
 
 yum install git 
 
-VALIDATE $? "git installation completed"
+VALIDATE $? "git installation completed" &>> $LOG_FILE
 
 
 

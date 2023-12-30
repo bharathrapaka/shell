@@ -1,9 +1,8 @@
-#!/bin/bash 
+#!/bin/bash
 arch=$(uname -m)
 
 if [ "$arch" == "x86_64" ]; then
     echo "64-bit"
-else 
+else
     echo "32-bit"
 fi
-    

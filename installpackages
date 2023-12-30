@@ -11,7 +11,7 @@ fi
 yum install telnet -y 
 
 RULE=$(echo $?)
-if [ $RULE -ne 0]
+if [ $RULE -ne 0 ]
 then
 echo "installation is failed"
 exit 1

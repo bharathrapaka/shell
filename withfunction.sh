@@ -1,5 +1,6 @@
 #!/bin/bash
 ID=$(id -u)
+LOG_FILE=/tmp/
 
 VALIDATE(){
     if [ $1 -ne 0 ]

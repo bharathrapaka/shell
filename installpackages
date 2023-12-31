@@ -1,20 +1,38 @@
 #!/bin/bash
-ID=$(id -u)
+ID=$(id -u) # vaildating for root or normal user 
+
+#for colouring below varaibles used 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+#below script used for TIMESTAMP and creating log with timestamp and appending in LOGFILE
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE=/tmp/$0.$TIMESTAMP.log
+echo "Script execuated at $TIMESTAMP" &>>$LOGFILE
+
+VALIDATE(){
+ if [ $? -ne 0 ]
+then 
+echo "ERROR: installation failed"
+else 
+echo " installation successful
+fi
+}
 
 if [ $ID -ne 0 ]
 then
-echo "run the script with root previlages"
+echo "run the script with root access"
 exit 1
 else
-echo "you are in root"
+echo "you are root user"
 fi
-yum install telnet -y 
 
-RULE=$(echo $?)
-if [ $RULE -ne 0 ]
-then
-echo "installation is failed"
-exit 1
-else 
-echo "installation is success"
-fi
+yum install gcc -y 
+
+VALIDATE $? "installation of package"
+
+
+
+

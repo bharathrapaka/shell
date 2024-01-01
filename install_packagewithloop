@@ -23,10 +23,10 @@ fi
 
 for package in $@
 do 
-yum list installed $package &>>LOG_FILE
+yum list installed $package &>>$LOG_FILE
 if [ $? -ne 0 ]
 then 
-yum install $package -y &>>LOG_FILE
+yum install $package -y &>>$LOG_FILE
 VAILDATE $? "installaation of $package"
 else 
 echo "$package is alrady installaed...SKIPPED"

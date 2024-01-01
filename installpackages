@@ -12,14 +12,17 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$0.$TIMESTAMP.log
 echo "Script execuated at $TIMESTAMP" &>>$LOGFILE
 
-VALIDATE(){
- if [ $? -ne 0 ]
+VALIDATE()
+{
+if [ $? -ne 0 ]
 then 
 echo "ERROR: installation failed"
 else 
 echo " installation successful
-fi
+fi 
 }
+ 
+
 
 if [ $ID -ne 0 ]
 then

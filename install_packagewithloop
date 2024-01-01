@@ -28,4 +28,7 @@ if [ $? -ne 0 ]
 then 
 yum install $package -y &>>LOG_FILE
 VAILDATE $? "installaation of $package"
+else 
+echo "$package is alrady installaed...SKIPPED"
+fi
 done

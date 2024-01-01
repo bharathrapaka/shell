@@ -21,8 +21,8 @@ else
 echo "you are root user"
 fi
 
-cd $1; find . -name "*.log" -type f -mmin +1 -delete &>>LOG_FILE
+cd $1; find . -name "*.log" -type f -mmin +1 -delete &>>$LOG_FILE
 #cd /tmp/shell; find . -name "*.log" -type f -mmin +1 -delete
-VAILDATE $? "deletion is "
+VAILDATE $? "deletion is " &>>$LOG_FILE
 
 

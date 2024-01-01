@@ -23,7 +23,7 @@ else
 echo "you are root user"
 fi
 
-yum install gcc &>>$LOG_FILE
+yum install gcc -y &>>$LOG_FILE
 
 VALIDATE $? "installation is "
 
